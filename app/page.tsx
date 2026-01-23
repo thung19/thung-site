@@ -1,65 +1,71 @@
-import Image from "next/image";
+import Container from "@/components/layout/Container";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main>
+      <Container className="py-12">
+        {/* Intro */}
+        <section className="space-y-5">
+          <h1 className="text-3xl font-semibold tracking-tight">
+            Hi, I’m Thomas Hung — a CS + Applied Math student at Vanderbilt.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-black/70 leading-relaxed max-w-2xl">
+            I build practical software (full-stack + Python tooling) and I’m especially interested in
+            data-centric ML and systems that are easy to maintain. I like projects that feel clean,
+            measurable, and useful.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+          <p className="text-black/70 leading-relaxed max-w-2xl">
+            Currently: working on a local note retrieval/summarization tool (RAG-style pipeline) and
+            exploring research areas around document understanding and evaluation.
+          </p>
+
+          {/* Jump links */}
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a
+              href="#experience"
+              className="underline underline-offset-4 text-black/70 hover:text-black transition"
+            >
+              Scroll to experience
+            </a>
+            <a
+              href="#projects"
+              className="underline underline-offset-4 text-black/70 hover:text-black transition"
+            >
+              Scroll to projects
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 text-black/70 hover:text-black transition"
+            >
+              Resume PDF
+            </a>
+          </div>
+        </section>
+
+        {/* Experience placeholder section */}
+        <section id="experience" className="mt-16 scroll-mt-24">
+          <h2 className="text-sm font-medium tracking-wide text-black/60 uppercase">
+            Experience
+          </h2>
+          <p className="mt-4 text-black/70 leading-relaxed max-w-2xl">
+            (Coming next) This section will summarize research, internships, and leadership highlights.
+          </p>
+        </section>
+
+        {/* Projects placeholder section */}
+        <section id="projects" className="mt-16 scroll-mt-24">
+          <h2 className="text-sm font-medium tracking-wide text-black/60 uppercase">
+            Projects
+          </h2>
+          <p className="mt-4 text-black/70 leading-relaxed max-w-2xl">
+            (Coming next) This section will show selected projects and link to full write-ups.
+          </p>
+        </section>
+      </Container>
+    </main>
   );
 }
