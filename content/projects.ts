@@ -18,9 +18,9 @@ export const projects: Project[] = [
     title: "SmartNote Summarizer (Local RAG)",
     description:
       "Local note indexing + retrieval with a clean pipeline (chunking, embeddings, search, summarization).",
-    stack: ["Python", "FastAPI", "Local embeddings"],
+    stack: ["Python", "FastAPI", "Local Embeddings"],
     links: [
-      { label: "GitHub", href: "https://github.com/your-username/your-repo" },
+      { label: "GitHub", href: "https://github.com/thung19/SmartNote" },
     ],
     featured: true,
   },
@@ -30,6 +30,9 @@ export const projects: Project[] = [
     description:
       "A minimal, content-first site for projects, experience, and writing.",
     stack: ["Next.js", "TypeScript", "Tailwind"],
+    links: [
+      { label: "GitHub", href: "https://github.com/thung19/thung-site" },
+    ],
     featured: true,
   },
 ];

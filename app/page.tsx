@@ -25,13 +25,13 @@ export default function Home() {
           </h1>
 
           <p className="text-black/70 leading-relaxed max-w-2xl mx-auto text-center">
-            I build practical software (TypeScript/Next.js and Python tooling) with an academic,
-            content-first mindset: clean structure, clear writing, and measurable results.
+            I build practical software in TypeScript/Next.js and Python, with an emphasis on clean structure, 
+            clear writing, and systems that actually work. I like building things that are genuinely cool and solve real problems
           </p>
 
           <p className="text-black/70 leading-relaxed max-w-2xl mx-auto text-center">
-            I’m especially interested in data-centric ML and evaluation—how we build systems that
-            hold up outside of toy demos.
+            I’m still exploring what that leads to long-term, but I’m drawn to work around data, ML, 
+            and evaluation—understanding how systems behave in the real world and why.
           </p>
 
           <div className="flex justify-center pt-2 mt-16">
@@ -66,21 +66,27 @@ export default function Home() {
         </section>
 
         {/* EDUCATION */}
-        <section id="education" className="mt-24 scroll-mt-24">
+        <section 
+          id="education" 
+          className="mt-24 scroll-mt-24 rounded-3xl bg-[var(--bg-soft)] py-12 px-6"
+        >
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-3">
               <Reveal delay={0.1}>
-                <h2 className="text-sm font-medium tracking-wide uppercase text-[var(--accent)]">
-                  Education
-                </h2>
-                <p className="mt-2 text-sm text-[var(--text-muted)]">
-                  Background and focus areas.
-                </p>
+                <div className="space-y-4">
+                  {/* Section marker */}
+                  <div className="h-1 w-12 rounded-full bg-[var(--accent)]" />
+
+                  {/* Section title */}
+                  <h2 className="text-2xl font-medium tracking-wide uppercase text-[var(--accent)]">
+                    Education
+                  </h2>
+                </div>
               </Reveal>
             </div>
 
             <div className="md:col-span-9">
-              <div className="border-t border-[var(--border)] divide-y divide-[var(--border)]">
+              <div className="mt-2 border-t border-[var(--border)] divide-y divide-[var(--border)]">
                 {education.map((ed, idx) => (
                   <Reveal key={idx} delay={0.2 + 0.1 * idx}>
                     <div className="py-6">
@@ -114,7 +120,7 @@ export default function Home() {
           className="mt-24 scroll-mt-24 rounded-3xl bg-[var(--bg-soft)] py-16 px-8"
         >
           <Reveal delay={0.1}>
-            <h2 className="text-2xl font-medium tracking-wide text-black/60 uppercase">
+            <h2 className="text-2xl font-medium tracking-wide uppercase text-[var(--accent)]">
               Experience
             </h2>
           </Reveal>
