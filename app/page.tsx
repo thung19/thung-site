@@ -140,12 +140,6 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {item.description && (
-                    <p className="mt-3 text-sm text-black/70 leading-relaxed max-w-3xl">
-                      {item.description}
-                    </p>
-                  )}
-
                   {item.bullets && item.bullets.length > 0 && (
                     <ul className="mt-6 list-disc pl-5 space-y-1 text-sm text-black/70">
                       {item.bullets.map((b, i) => (
