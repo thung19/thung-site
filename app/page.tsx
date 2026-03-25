@@ -62,7 +62,6 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="pt-10 text-center text-xs text-black/50">Scroll</div>
         </section>
 
         {/* EDUCATION */}
@@ -187,6 +186,30 @@ export default function Home() {
                           {link.label}
                         </a>
                       ))}
+                    </div>
+                  )}
+
+                  {p.video && (
+                    <div className="mt-4 flex justify-center">
+                      <div className="w-full max-w-lg rounded-xl overflow-hidden bg-black/5 aspect-video">
+                      {/(?:youtube\.com|youtu\.be)/.test(p.video) ? (
+                        <iframe
+                          src={p.video.replace(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+).*/, "https://www.youtube-nocookie.com/embed/$1")}
+                          title={p.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        />
+                      ) : (
+                        <video
+                          src={p.video}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full h-full object-contain"
+                        />
+                      )}
+                      </div>
                     </div>
                   )}
                 </article>

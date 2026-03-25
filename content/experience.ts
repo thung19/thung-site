@@ -7,6 +7,16 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
+    org: "Vanderbilt University – Neurdy Lab/Chang Lab",
+    role: "Research Assistant",
+    period: "Jan. 2026 — Current",
+
+    bullets: [
+      " Refining a Vue + Vite QA tool for fMRI datasets and TSVs, improving D3.js visuals for physiological signals (10k+ datapoints)",
+      "Collaborating with researchers and developers to understand needs, clarify project goals, and guide improvements to the QA tool",
+    ],
+  },
+  {
     org: "Seedr Investments",
     role: "Software Development Intern",
     period: "Aug. 2025 — Nov. 2025",
