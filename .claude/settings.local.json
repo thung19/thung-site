@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://cdn.prod.website-files.com/64ad6f1aef87635bd23449f1/css/lattice-main.shared.c9674ee1d.min.css\")"
+    ]
+  }
+}

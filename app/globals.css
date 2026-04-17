@@ -1,37 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --bg-main: #f8fafc;        /* slate-50 */
-  --bg-soft: #eef2ff;
+  /* Lattice palette */
+  --bg-main: #ffffff;
+  --bg-sand: #f5f2e8;
 
-  --text-main: #020617;      /* midnight */
-  --text-muted: #475569;
+  --color-black: #000000;
+  --color-grey-600: #999999;
+  --color-grey-800: #666666;
+  --color-border: #e0e0e0;
 
-  --border: rgba(2, 6, 23, 0.12);
+  --blue-primary: #05537a;
+  --blue-hover: #066899;
 
-  --accent: #0284c7;         /* cyan-blue */
-  --accent-soft: rgba(2, 132, 199, 0.15);
+  --green-accent: #51e0cd;
+  --green-light: #b1f0e7;
 
-  --accent-2: #2563eb;       /* electric blue */
+  /* Gradient section tints (very light pastels) */
+  --grad-teal: linear-gradient(225deg, #e6f9f8 0%, #e5fcf3 100%);
+  --grad-periwinkle: linear-gradient(225deg, #eeeeff 0%, #e6f5fb 100%);
+
+  /* Legacy compat for page.tsx vars */
+  --bg-soft: var(--grad-teal);
+  --accent: var(--blue-primary);
+  --accent-2: var(--blue-hover);
+  --border: var(--color-border);
+
+  /* Shadow system (Lattice multi-layer) */
+  --shadow-sm:
+    0 2px 2px rgba(0,0,0,0.04),
+    0 1px 1px rgba(0,0,0,0.04);
+  --shadow-md:
+    0 16px 16px -8px rgba(0,0,0,0.05),
+    0 8px 8px -4px rgba(0,0,0,0.04),
+    0 4px 4px -2px rgba(0,0,0,0.04),
+    0 2px 2px rgba(0,0,0,0.04),
+    0 1px 1px rgba(0,0,0,0.03);
+  --shadow-lg:
+    0 64px 64px -32px rgba(0,0,0,0.04),
+    0 32px 32px -16px rgba(0,0,0,0.04),
+    0 16px 16px -8px rgba(0,0,0,0.04),
+    0 8px 8px -4px rgba(0,0,0,0.04),
+    0 4px 4px -2px rgba(0,0,0,0.04),
+    0 2px 2px rgba(0,0,0,0.04),
+    0 1px 1px rgba(0,0,0,0.04);
+
+  --transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-
 @theme inline {
-  --color-background: var(--bg-main);
-  --color-foreground: var(--text-main);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+*, *::before, *::after {
+  font-feature-settings: "cv01", "ss03";
 }
 
 body {
-  background: linear-gradient(
-    180deg,
-    #eef4ff 0%,
-    var(--bg-main) 40%
-  );
-  color: var(--text-main);
+  background: #ffffff;
+  color: #000000;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Lattice-style green underline links */
+.link-accent {
+  color: var(--blue-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--green-accent);
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.link-accent:hover {
+  color: var(--blue-hover);
+}
+
+/* Card hover elevation */
+.card-hover {
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+.card-hover:hover {
+  box-shadow: var(--shadow-lg);
+  transform: perspective(1200px) translateZ(6px);
 }

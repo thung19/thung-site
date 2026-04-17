@@ -1,11 +1,12 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Source_Serif_4 } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const serif = Source_Serif_4({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 type LayoutProps = {
@@ -14,8 +15,8 @@ type LayoutProps = {
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang="en">
-      <body className={`${serif.className} min-h-dvh flex flex-col`}>
+    <html lang="en" className={inter.variable}>
+      <body className="min-h-dvh flex flex-col">
         <Navbar />
         <div className="flex-1">{children}</div>
         <Footer />

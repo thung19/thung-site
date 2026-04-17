@@ -11,6 +11,7 @@ export type Project = {
   links?: ProjectLink[]; // GitHub, demo, paper, etc.
   featured?: boolean;    // optional: used for home page later
   video?: string;        // local path ("/videos/demo.mp4") or YouTube URL
+  screenshot?: string;   // local path ("/images/project-slug.png") or external URL
 };
 
 export const projects: Project[] = [
@@ -36,6 +37,7 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/thung19/SmartNote" },
     ],
     featured: true,
+    screenshot: "/images/smart-note.png",
   },
   {
     slug: "portfolio",
