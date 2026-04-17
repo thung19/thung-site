@@ -3,6 +3,7 @@ import { experience } from "@/content/experience";
 import { projects } from "@/content/projects";
 import SocialLinks from "@/components/ui/SocialLinks";
 import Reveal from "@/components/ui/Reveal";
+import StackTags from "@/components/ui/StackTags";
 import { education } from "@/content/education";
 
 export default function Home() {
@@ -369,33 +370,16 @@ export default function Home() {
                       fontSize: "0.875rem",
                       color: "#666666",
                       lineHeight: 1.65,
-                      flex: 1,
                       marginBottom: "1rem",
                     }}
                   >
                     {p.description}
                   </p>
 
-                  <div
-                    className="flex flex-wrap"
-                    style={{ gap: "0.375rem", marginBottom: "1rem" }}
-                  >
-                    {p.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        style={{
-                          fontSize: "0.75rem",
-                          fontWeight: 500,
-                          color: "#05537a",
-                          background: "#e6f9f8",
-                          padding: "2px 8px",
-                          borderRadius: "999px",
-                          border: "1px solid rgba(5,83,122,0.12)",
-                        }}
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div style={{ flex: 1 }} />
+
+                  <div style={{ marginBottom: "1rem", position: "relative" }}>
+                    <StackTags stack={p.stack} />
                   </div>
 
                   {p.links && p.links.length > 0 && (

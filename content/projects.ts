@@ -29,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     slug: "smartnote",
-    title: "SmartNote Summarizer (Local RAG)",
+    title: "SmartNote",
     description:
       "Full-Stack in-memory RAG engine with chunking and vector search for semantic note retrieval.",
     stack: ["Python", "SentenceTransformers", "Next.js", "TypeScript", "Vercel", "Google Cloud"],
@@ -49,5 +49,6 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/thung19/thung-site" },
     ],
     featured: true,
+    screenshot: "/images/personal-site.png",
   },
 ];
